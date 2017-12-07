@@ -68,5 +68,5 @@ void loop() {
       Serial.println(Input);  //Imprimo de vuelta a LabVIEW cuanto esta la medicion para graficarla
     }
 
-  analogWrite(PLED, Setpoint);  //Para identificar la planta, cuando no tiene sintonizado el controlador, debe adquirir los datos de la planta
+  analogWrite(PLED, Setpoint*255.0/1023.0);  //Para identificar la planta, cuando no tiene sintonizado el controlador, debe adquirir los datos de la planta
 }
